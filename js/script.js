@@ -130,6 +130,7 @@ $(function() {
     var targetSVG =
         "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
 
+    var planeSVG = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";
 
     var images = [{
         id: "minsk",
@@ -138,74 +139,86 @@ $(function() {
         title: "Минск",
         latitude: 53.9,
         longitude: 27.5667,
-        scale: 1
+        scale: 1,
     }, {
+        id: "kaliningrad",
         svgPath: targetSVG,
         title: "Калининград",
         latitude: 54.7104,
         longitude: 20.4522,
         scale: 0.5
     }, {
+        id: "novosibirsk",
         svgPath: targetSVG,
         title: "Новосибирск",
         latitude: 55.0083,
         longitude: 82.9357,
         scale: 0.5
     }, {
+        id: "moscow",
         svgPath: targetSVG,
         title: "Москва",
         latitude: 55.7558,
         longitude: 37.6176,
         scale: 0.5
     }, {
+        id: "ufa",
         svgPath: targetSVG,
         title: "Уфа",
         latitude: 54.7388,
         longitude: 55.9721,
         scale: 0.5
     }, {
+        id: "saint",
         svgPath: targetSVG,
         title: "Санкт-Петербург",
         latitude: 59.89444,
         longitude: 30.26417,
         scale: 0.5
     }, {
+        id: "harkov",
         svgPath: targetSVG,
         title: "Харьков",
         latitude: 49.98081,
         longitude: 36.25272,
         scale: 0.5
     }, {
+        id: "odessa",
         svgPath: targetSVG,
         title: "Одесса",
         latitude: 46.47747,
         longitude: 30.73262,
         scale: 0.5
     }, {
+        id: "lviv",
         svgPath: targetSVG,
         title: "Львов",
         latitude: 49.83826,
         longitude: 24.02324,
         scale: 0.5
     }, {
+        id: "almaty",
         svgPath: targetSVG,
         title: "Алматы",
         latitude: 43.15,
         longitude: 76.54,
         scale: 0.5
     }, {
+        id: "vroclav",
         svgPath: targetSVG,
         title: "Вроцлав",
         latitude: 51.0989844,
         longitude: 17.0366461,
         scale: 0.5
     }, {
+        id: "vilnus",
         svgPath: targetSVG,
         title: "Вильнюс",
         latitude: 54.651162,
         longitude: 25.280067,
         scale: 0.5
     }, {
+        id: "riga",
         svgPath: targetSVG,
         title: "Рига",
         latitude: 56.946,
@@ -215,10 +228,27 @@ $(function() {
 
     var lines = images.map(function(image) {
         return {
-            latitudes: [53.9, image.latitude],
-            longitudes: [27.5667, image.longitude]
+            latitudes: [image.latitude, 53.9],
+            longitudes: [image.longitude, 27.5667],
+            id: "line" + image.id
         }
     });
+
+    var l = images.length;
+    for (var i = 0; i < l; i++) {
+        images.push({
+            svgPath: planeSVG,
+            positionOnLine: 0,
+            color: "#aa0000",
+            alpha: 0.9,
+            animateAlongLine: true,
+            lineId: "line" + images[i].id,
+            flipDirection: true,
+            loop: true,
+            scale: 0.03,
+            positionScale: 1
+        });
+    }
 
     var map = AmCharts.makeChart("chartmap", {
         type: "map",
@@ -290,7 +320,7 @@ $(function() {
         },
 
         linesSettings: {
-            arc: -0.1, // this makes lines curved. Use value from -1 to 1
+            //arc: -0.1, // this makes lines curved. Use value from -1 to 1
             arrow: "middle",
             color: "#CC0000",
             alpha: 0.4,
