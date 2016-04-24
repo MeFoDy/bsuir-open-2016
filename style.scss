@@ -6,9 +6,9 @@
 
 body {
     background-image: url(img/bg-dark.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-x;
     background-position: right top;
+    animation: animatedBackground 40s alternate infinite;
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
@@ -194,6 +194,7 @@ p {
         position: absolute;
         right: 80px;
         top: 80px;
+        text-align: right;
     }
 }
 
@@ -205,4 +206,14 @@ p {
 
 .amcharts-chart-div a {
     display: none !important;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -200px 0;
+    }
 }

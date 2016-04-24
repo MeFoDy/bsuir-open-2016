@@ -1,7 +1,7 @@
 "use strict"
 
 var timeout = 10000;
-var autoplay = true;
+var autoplay = false;
 
 impress().init();
 
@@ -106,6 +106,10 @@ var chart = AmCharts.makeChart("chartdiv", {
         "columnWidth": 0.5,
         "valueField": "year2016"
     }],
+    "legend": {
+        "useGraphSettings": true,
+        "align": "center"
+    },
     "plotAreaFillAlphas": 0.1,
     "categoryField": "place",
     "categoryAxis": {
