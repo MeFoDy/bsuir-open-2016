@@ -1,21 +1,22 @@
 {
-    "name": "bsuir-open-2016-preview",
-    "version": "0.0.0",
-    "authors": [
-        "Nikita Dubko <mefody93@gmail.com>"
-    ],
-    "main": "index.html",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "libs",
-        "test",
-        "tests"
-    ],
-    "private": true,
-    "dependencies": {
-        "jquery": "^2.2.0",
-        "amcharts3": "^3.20.3",
-        "normalize-css": "^4.1.1"
-    }
+  "name": "bsuir-open-2016-preview",
+  "version": "0.0.0",
+  "authors": [
+    "Nikita Dubko <mefody93@gmail.com>"
+  ],
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "amcharts3": "^3.20.3",
+    "normalize-css": "^4.1.1",
+    "ammap3": "^3.20.3"
+  }
 }
