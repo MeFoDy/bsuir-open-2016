@@ -243,7 +243,7 @@ $(function() {
             alpha: 0.9,
             animateAlongLine: true,
             lineId: "line" + images[i].id,
-            flipDirection: true,
+            flipDirection: false,
             loop: true,
             scale: 0.03,
             positionScale: 1
