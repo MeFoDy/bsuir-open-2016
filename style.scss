@@ -8,7 +8,7 @@ body {
     background-image: url(img/bg-dark.jpg);
     background-repeat: repeat-x;
     background-position: right top;
-    animation: animatedBackground 40s alternate infinite;
+    animation: animatedBackground 20s alternate infinite;
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
@@ -236,6 +236,6 @@ p {
     }
 
     to {
-        background-position: -200px 0;
+        background-position: -100px 0;
     }
 }
