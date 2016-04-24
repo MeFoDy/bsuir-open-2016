@@ -1,0 +1,35 @@
+{
+  "name": "ammap3",
+  "authors": [
+    "amCharts <contact@amcharts.com>"
+  ],
+  "description": "JavaScript Maps V3",
+  "main": [
+    "ammap/ammap.js"
+  ],
+  "keywords": [
+    "amcharts",
+    "maps",
+    "javascript"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "Custom",
+  "homepage": "http://www.amcharts.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amcharts/ammap3.git"
+  },
+  "version": "3.20.3",
+  "_release": "3.20.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.20.3",
+    "commit": "477619da286b2d3d81cd89c8fbcba3e0ca2eb10a"
+  },
+  "_source": "https://github.com/amcharts/ammap3.git",
+  "_target": "^3.20.3",
+  "_originalSource": "ammap3",
+  "_direct": true
+}
