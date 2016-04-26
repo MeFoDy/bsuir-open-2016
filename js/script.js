@@ -1,7 +1,7 @@
 "use strict"
 
 var timeout = 15000;
-var autoplay = false;
+var autoplay = true;
 var timeoutHandler = null;
 
 impress().init();
