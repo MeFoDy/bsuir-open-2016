@@ -149,28 +149,67 @@ p {
             padding: 10px;
         }
     }
+
+    .partners-text {
+        display: inline-block;
+        margin: 0;
+        bottom: 15px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        font-weight: bold;
+
+        span {
+            font-size: 20px;
+            text-align: center;
+            width: 50%;
+            display: inline-block;
+            float: left;
+        }
+    }
 }
 
 #third {
     .photos {
-        float: left;
         width: 20vw;
 
         .photo {
             height: 200px;
+            position: absolute;
+            top: 0;
             border: 10px solid white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
             &.photo-1 {
-                transform: translate3d(-40px, 40px, -40px) rotate(5deg);
+                transform: translate3d(-40px, 150px, 0px) rotate(5deg);
             }
 
             &.photo-2 {
-                transform: translate3d(0, 0, 0px);
+                transform: translate3d(0, -40px, 10px) rotate(-4deg);
             }
 
             &.photo-3 {
-                transform: translate3d(40px, -40px, 40px) rotate(-5deg);
+                transform: translate3d(140px, -230px, 20px) rotate(3deg);
+            }
+
+            &.photo-4 {
+                transform: translate3d(250px, 120px, 95px) rotate(-5deg);
+            }
+
+            &.photo-5 {
+                transform: translate3d(220px, -60px, 5px) rotate(2deg);
+            }
+
+            &.photo-6 {
+                transform: translate3d(410px, -220px, 50px) rotate(-2deg);
+            }
+
+            &.photo-7 {
+                transform: translate3d(540px, 150px, 60px) rotate(5deg);
+            }
+
+            &.photo-8 {
+                transform: translate3d(500px, -40px, 90px);
             }
         }
     }
@@ -211,6 +250,73 @@ p {
         text-align: right;
         z-index: 10;
         text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px black;
+    }
+}
+
+#countries-list {
+    width: 80vw;
+
+    .description {
+        margin-top: 40px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 24px;
+
+        .big {
+            font-size: 32px;
+        }
+
+        .column {
+            display: inline-block;
+            width: 32%;
+            vertical-align: top;
+
+            ul {
+                display: inline-block;
+                margin: 20px;
+
+                span, img {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                img {
+                    margin-left: -40px;
+                    margin-right: 10px;
+                }
+
+                li {
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+}
+
+#rules {
+    table.rules {
+        width: 100%;
+        margin-top: 100px;
+
+        tr.rule {
+            td {
+                .big {
+                    font-size: 46px;
+                }
+
+                text-align: center;
+                width: 25%;
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.7);
+
+                &.img-container {
+                    max-height: 200px;
+
+                    img {
+                        max-width: 80%;
+                    }
+                }
+            }
+        }
     }
 }
 

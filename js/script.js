@@ -1,7 +1,7 @@
 "use strict"
 
-var timeout = 10000;
-var autoplay = true;
+var timeout = 15000;
+var autoplay = false;
 var timeoutHandler = null;
 
 impress().init();
@@ -205,91 +205,92 @@ $(function() {
         title: "Калининград",
         latitude: 54.7104,
         longitude: 20.4522,
-        scale: 0.5
+        scale: 1
     }, {
         id: "novosibirsk",
         svgPath: targetSVG,
         title: "Новосибирск",
         latitude: 55.0083,
         longitude: 82.9357,
-        scale: 0.5
+        scale: 1
     }, {
         id: "moscow",
         svgPath: targetSVG,
         title: "Москва",
         latitude: 55.7558,
         longitude: 37.6176,
-        scale: 0.5
+        scale: 1
     }, {
         id: "ufa",
         svgPath: targetSVG,
         title: "Уфа",
         latitude: 54.7388,
         longitude: 55.9721,
-        scale: 0.5
+        scale: 1
     }, {
         id: "saint",
         svgPath: targetSVG,
         title: "Санкт-Петербург",
         latitude: 59.89444,
         longitude: 30.26417,
-        scale: 0.5
+        scale: 1
     }, {
         id: "harkov",
         svgPath: targetSVG,
         title: "Харьков",
         latitude: 49.98081,
         longitude: 36.25272,
-        scale: 0.5
+        scale: 1
     }, {
         id: "odessa",
         svgPath: targetSVG,
         title: "Одесса",
         latitude: 46.47747,
         longitude: 30.73262,
-        scale: 0.5
+        scale: 1
     }, {
         id: "lviv",
         svgPath: targetSVG,
         title: "Львов",
         latitude: 49.83826,
         longitude: 24.02324,
-        scale: 0.5
+        scale: 1
     }, {
         id: "almaty",
         svgPath: targetSVG,
         title: "Алматы",
         latitude: 43.15,
         longitude: 76.54,
-        scale: 0.5
+        scale: 1
     }, {
         id: "vroclav",
         svgPath: targetSVG,
         title: "Вроцлав",
         latitude: 51.0989844,
         longitude: 17.0366461,
-        scale: 0.5
+        scale: 1
     }, {
         id: "vilnus",
         svgPath: targetSVG,
         title: "Вильнюс",
         latitude: 54.651162,
         longitude: 25.280067,
-        scale: 0.5
+        scale: 1
     }, {
         id: "riga",
         svgPath: targetSVG,
         title: "Рига",
         latitude: 56.946,
         longitude: 24.10589,
-        scale: 0.5
+        scale: 1
     }];
 
     var lines = images.map(function(image) {
         return {
             latitudes: [image.latitude, 53.9],
             longitudes: [image.longitude, 27.5667],
-            id: "line" + image.id
+            id: "line" + image.id,
+            "thickness": 2
         }
     });
 
@@ -305,7 +306,7 @@ $(function() {
             flipDirection: false,
             loop: true,
             scale: 0.03,
-            positionScale: 1
+            positionScale: 1.3
         });
     }
 
