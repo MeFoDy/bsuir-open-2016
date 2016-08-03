@@ -3,6 +3,7 @@
 var timeout = 15000;
 var autoplay = true;
 var timeoutHandler = null;
+var _duration = 2000;
 
 impress().init();
 
@@ -123,13 +124,13 @@ $(function() {
 
     function redrawChart() {
         chart.animateData(fullData, {
-            duration: 2000
+            duration: _duration
         });
     };
 
     function resetChart() {
         chart.animateData(emptyData, {
-            duration: 2000
+            duration: _duration
         });
     };
 
@@ -180,7 +181,7 @@ $(function() {
 
     chart.addListener("init", function() {
         chart.animateData(fullData, {
-            duration: 2000
+            duration: _duration
         });
     });
 

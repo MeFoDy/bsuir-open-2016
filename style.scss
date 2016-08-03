@@ -113,6 +113,48 @@ p {
         max-height: 80vh;
         vertical-align: middle;
     }
+
+    .svg-obj {
+        transition: all ease 0.5s;
+    }
+
+    .svg-ball {
+        animation: svg-animation-ball 40s ease 0s infinite;
+        transform-origin: center;
+    }
+
+    .svg-ball-wrapper {
+        animation: svg-animation-ball-wrapper 33s ease 0s infinite;
+        transform-origin: center;
+    }
+
+    @keyframes svg-animation-ball {
+        0% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes svg-animation-ball-wrapper {
+        0% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(-180deg);
+        }
+
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
 }
 
 #second {
