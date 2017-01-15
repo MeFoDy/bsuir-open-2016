@@ -5,12 +5,24 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
     background-image: url(img/bg-dark.jpg);
     background-repeat: repeat-x;
     background-position: right top;
     animation: animatedBackground 20s alternate infinite;
-    min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
 }
 
 a.link {
@@ -23,7 +35,6 @@ a.link {
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
-    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -65,7 +76,6 @@ p {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 48px;
     line-height: 1.5;
@@ -88,7 +98,6 @@ p {
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -ms-transition: opacity 1s;
-    -o-transition: opacity 1s;
     transition: opacity 1s;
 }
 
@@ -119,12 +128,12 @@ p {
     }
 
     .svg-ball {
-        animation: svg-animation-ball 40s ease 0s infinite;
+        animation: svg-animation-ball 40s linear 0s infinite;
         transform-origin: center;
     }
 
     .svg-ball-wrapper {
-        animation: svg-animation-ball-wrapper 33s ease 0s infinite;
+        animation: svg-animation-ball-wrapper 33s linear 0s infinite;
         transform-origin: center;
     }
 
@@ -281,7 +290,6 @@ p {
 }
 
 #fifth {
-    padding: 0;
     border: 1px dashed #15234D;
     padding: 2px;
 
